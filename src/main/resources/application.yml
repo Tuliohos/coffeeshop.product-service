@@ -1,6 +1,14 @@
 # Datasource
-spring.datasource.url: jdbc:postgresql://localhost:5432/product-db
-spring.datasource.username: local-user
-spring.datasource.password: local-password
-spring.datasource.driver-class-name: org.postgresql.Driver
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/product-db
+    username: local-user
+    password: local-password
+    driver-class-name: org.postgresql.Driver
+    liquibase.enabled: true
+
 spring.jpa.show-sql: false
+
+# Liquibase
+spring.liquibase.change-log: classpath:/db/liquibase.xml
+logging.level.liquibase: INFO
