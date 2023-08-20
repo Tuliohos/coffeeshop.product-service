@@ -1,0 +1,6 @@
+# Datasource
+spring.datasource.url: jdbc:postgresql://localhost:5432/product-db
+spring.datasource.username: local-user
+spring.datasource.password: local-password
+spring.datasource.driver-class-name: org.postgresql.Driver
+spring.jpa.show-sql: false
