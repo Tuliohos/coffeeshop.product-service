@@ -34,7 +34,7 @@ Spring Boot. The project consists of multiple microservices including initially 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Tuliohos/coffeeshop.order-service.git
+   git clone https://github.com/Tuliohos/coffeeshop.product-service.git
 
 2. Customize your configuration:
 
