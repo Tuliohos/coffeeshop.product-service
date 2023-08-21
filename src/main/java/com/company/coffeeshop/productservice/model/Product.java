@@ -26,7 +26,7 @@ public class Product extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
-
+    private UUID externalId;
     private String name;
     private Integer calories;
     private String description;
