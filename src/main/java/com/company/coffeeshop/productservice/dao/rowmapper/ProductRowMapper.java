@@ -14,6 +14,7 @@ public class ProductRowMapper implements RowMapper<Product> {
     public Product mapRow(ResultSet rs, int rowNum) throws SQLException {
         return Product.builder()
                 .id((UUID) rs.getObject("id"))
+                .externalId((UUID) rs.getObject("external_id"))
                 .name(rs.getString("name"))
                 .calories(rs.getInt("calories"))
                 .description(rs.getString("description"))
