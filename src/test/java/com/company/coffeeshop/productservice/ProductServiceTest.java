@@ -34,24 +34,20 @@ class ProductServiceTest {
 
     @BeforeEach
     void setup(){
-        productDTOMock = ProductDTO.builder()
-                .id(UUID.randomUUID())
-                .name("nameTest")
-                .price(1.0)
-                .type(ProductType.BEVERAGE)
-                .isVegan(Boolean.FALSE)
-                .isGlutenFree(Boolean.FALSE)
-                .calories(10)
-                .description("testDescription")
-                .imageUrl("fakeUrl")
-                .build();
+        productDTOMock = new ProductDTO(
+                UUID.randomUUID(),
+                "nameTest",
+                10,
+                "testDescription",
+                1.0,
+                ProductType.BEVERAGE,
+                Boolean.FALSE,
+                Boolean.FALSE,
+                "fakeUrl");
     }
 
     @Test
     void whenCreateProductExpectProductCreated() {
-        //When
-        productDTOMock.setId(null);
-
         // Then
         productService.createProduct(productDTOMock);
 
@@ -61,7 +57,7 @@ class ProductServiceTest {
 
     @Test
     void whenGetProductByIdExpectCorrectProductReturned() {
-        var productId = productDTOMock.getId();
+        var productId = productDTOMock.id();
 
         // When
         when(productDao.getById(productId)).thenReturn(productDTOMock.toEntity());
