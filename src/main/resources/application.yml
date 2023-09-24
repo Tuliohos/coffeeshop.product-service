@@ -14,10 +14,4 @@ spring.liquibase.change-log: classpath:/db/liquibase.xml
 logging.level.liquibase: INFO
 
 server:
-  port: 8443
-  ssl:
-    enabled: true
-    key-store-type: PKCS12
-    key-store: classpath:CoffeeShopProductService.p12
-    key-store-password: coffeeshopproductservicepass
-    key-alias: CoffeeShopProductService
+  port: 8080
